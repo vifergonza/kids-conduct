@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="editor">
+    <h1>Imagen</h1>
+    <div>
+        <img id="storedImage" src="" alt="Imagen no encontrada" style="display:none;">
+        <input type="file" id="imageUploader" accept="image/*">
+        <button id="uploadButton">Subir</button>
+    </div>  
+    <h1>Ficha</h1>  
+    <form id="userForm">
+        <fieldset>
+            <legend>Datos</legend>
+            <div class="form_control">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form_control">
+                <label for="age">Edad:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form_control">
+                <label for="age">Identificador:</label>
+                <input type="text" id="number_id" name="number_id" required>
+            </div>
+            <div class="form_control">
+                <label for="age">Puntuación para el pulgar</label>
+                <input type="number" id="score" name="score" required min="0" max="100">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Se porta bien en...</legend>
+            <div class="form_control">
+                <label for="school">En el cole</label>
+                <input id="school" type="checkbox" name="behaviors" value="school">
+            </div>
+            <div class="form_control">
+                <label for="food">Come bien</label>
+                <input id="food" type="checkbox" name="behaviors" value="food">
+            </div>
+            <div class="form_control">
+                <label for="obey">Hace caso</label>
+                <input id="obey" type="checkbox" name="behaviors" value="obey">
+            </div>
+            <div class="form_control">
+                <label for="water">Hace pis / caca en el water</label>
+                <input id="water" type="checkbox" name="behaviors" value="water">
+            </div>
+            <div class="form_control">
+                <label>Recoge sus juguetes</label>
+                <input type="checkbox" name="behaviors" value="tidy">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Puede...</legend>
+            <div class="form_control">
+                <label for="holidays">Ir a las vacaciones</label>
+                <input id="holidays" type="checkbox" name="rewards" value="holidays">
+            </div>
+            <div class="form_control">
+                <label for="watch_tv">Ver la tele</label>
+                <input id="watch_tv" type="checkbox" name="rewards" value="watch_tv">
+            </div>
+            <div class="form_control">
+                <label for="park">Ir al parque</label>
+                <input id="park" type="checkbox" name="rewards" value="park">
+            </div>
+            <div class="form_control">
+                <label for="grandfathers">Ir al Abuelos</label>
+                <input id="grandfathers" type="checkbox" name="rewards" value="grandfathers">
+            </div>
+        </fieldset>
+        <button type="submit">Guardar</button>
+    </form>
+    <h1><a href="./index.html">Ir a la ficha</a></h1>
+
+    <script src="js/edit.js"></script>
+</body>
+</html>
